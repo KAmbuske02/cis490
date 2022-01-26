@@ -1,0 +1,462 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled0.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyPJZZX/pVLGgYZDoQtGeCa0",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/KAmbuske02/Kohl-Ambuske/blob/main/Kohl%20Ambuske\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Python Intro\n",
+        "==================\n",
+        "# Common Program Structures\n",
+        "\n",
+        "* **IO**\n",
+        " * Console\n",
+        " * File\n",
+        "\n",
+        "* Data Structures\n",
+        " * Variables\n",
+        " * List (Array)\n",
+        " * Dict (Hashtable)\n",
+        "\n",
+        "* Program Structures\n",
+        " * Loops\n",
+        " * If Statement "
+      ],
+      "metadata": {
+        "id": "yzQY0nK05jvn"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HD0Hrvc05WuE",
+        "outputId": "a903ce85-83e9-471c-a6e2-6fd3e74f82e3"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello World\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"Hello World\")\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# x = input(\"Who is NU's Mascot?\")\n",
+        "x = input('Who is NU\\s Mascot?')\n",
+        "print(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fWTzv2LO8bE1",
+        "outputId": "eea382af-a93e-40d6-cd1b-8295d97511d9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Who is NU\\s Mascot?Monte\n",
+            "Monte\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Variables\n",
+        "a = 5\n",
+        "b = a\n",
+        "a = 3\n",
+        "print('a:' , a)\n",
+        "print('b:' , b)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AB3mGSC69a3W",
+        "outputId": "992ffa81-ff16-4c83-cf6b-2cffb6a31f5f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a: 3\n",
+            "b: 5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# LIST\n",
+        "a = [1,2,3,4]\n",
+        "print('a:' , a)\n",
+        "print('a[0]:' , a[0])\n",
+        "print('a[-1]:' ,a[-1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yOmD9J3-94H_",
+        "outputId": "d8470a23-8874-43b7-fdcc-88eba108dcac"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a: [1, 2, 3, 4]\n",
+            "a[0]: 1\n",
+            "a[-1]: 4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = ['a','b','c',4]\n",
+        "y = x\n",
+        "x[0] = ['MONTE WAS HERE!']\n",
+        "print('x:',x)\n",
+        "print('y:', y)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tiPW_FM0-hr4",
+        "outputId": "fa344d30-f18a-4776-f2c2-a1d03f9385dc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "x: [['MONTE WAS HERE!'], 'b', 'c', 4]\n",
+            "y: [['MONTE WAS HERE!'], 'b', 'c', 4]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x.append('e')\n",
+        "print(x)\n",
+        "print(y)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GGzXWmU2_bLV",
+        "outputId": "acd69ce7-436c-430d-8638-6f8b682d5874"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[['MONTE WAS HERE!'], 'b', 'c', 4, 'e']\n",
+            "[['MONTE WAS HERE!'], 'b', 'c', 4, 'e']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# BASIC MATH\n",
+        "x = 5\n",
+        "y = 6\n",
+        "z = 5/6\n",
+        "a = 3+4\n",
+        "b = 3+4*2\n",
+        "c = (3+4)*2\n",
+        "d = 2**0.5\n",
+        "print('x:' ,x)\n",
+        "print('z:' ,z)\n",
+        "print('a:' ,a)\n",
+        "print('b:' ,b)\n",
+        "print('c:' ,c)\n",
+        "print('d:' ,d)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nOmDHcxm_l2L",
+        "outputId": "ad85541c-c1d8-4725-c5fb-cf94017a74b8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "x: 5\n",
+            "z: 0.8333333333333334\n",
+            "a: 7\n",
+            "b: 11\n",
+            "c: 14\n",
+            "d: 1.4142135623730951\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# DICT\n",
+        "Names = ['CHRISTIAN','RAQUAN','MICHAEL']\n",
+        "fav_num = [3,16,4]\n",
+        "n = 'Raquan'"
+      ],
+      "metadata": {
+        "id": "xyQ7vqjCBgzg"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "65 % 2"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JHjobLb_EOrf",
+        "outputId": "397bc651-ea7d-4897-a4f9-16829831b1fe"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "1"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# If Statment \n",
+        "answer = input(\"Who is NU's mascot?\")\n",
+        "# Not the leading spaces!!! Allignment is key in Python\n",
+        "if (answer == 'Monte'):\n",
+        "  print(\"Correct\")\n",
+        "else:\n",
+        "  print(\"Sorry, the right answer is: Monte\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Zm1xTZtgYGRf",
+        "outputId": "a5f78a44-b12a-4634-bd59-9d4a52fa0ecb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Who is NU's mascot?Monte\n",
+            "Correct\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 5\n",
+        "3 + 4.0\n",
+        "print(a == 3)\n",
+        "bool(None)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NZoseikMYhro",
+        "outputId": "5936cf04-b86c-4f7f-9382-d64b4a93a19e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# While Loop\n",
+        "times_printed = 0\n",
+        "while True:\n",
+        "  print(times_printed, '- I LOOOOOOOVE BITCONNECT!')\n",
+        "  times_printed = times_printed + 1\n",
+        "  if times_printed == 10:\n",
+        "    break"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rvq-ZpEeZNa2",
+        "outputId": "d043e2a5-adeb-4a5c-a3e7-9ee79befdffc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0 - I LOOOOOOOVE BITCONNECT!\n",
+            "1 - I LOOOOOOOVE BITCONNECT!\n",
+            "2 - I LOOOOOOOVE BITCONNECT!\n",
+            "3 - I LOOOOOOOVE BITCONNECT!\n",
+            "4 - I LOOOOOOOVE BITCONNECT!\n",
+            "5 - I LOOOOOOOVE BITCONNECT!\n",
+            "6 - I LOOOOOOOVE BITCONNECT!\n",
+            "7 - I LOOOOOOOVE BITCONNECT!\n",
+            "8 - I LOOOOOOOVE BITCONNECT!\n",
+            "9 - I LOOOOOOOVE BITCONNECT!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# for loop\n",
+        "for i in range(10):\n",
+        "  print(i, '- I LOOOOOOVE BITCONNECT!')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PMKCoIjdbhCX",
+        "outputId": "3a3a9212-8c7c-42d9-cae5-8c68ba1dc4e7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0 - I LOOOOOOVE BITCONNECT!\n",
+            "1 - I LOOOOOOVE BITCONNECT!\n",
+            "2 - I LOOOOOOVE BITCONNECT!\n",
+            "3 - I LOOOOOOVE BITCONNECT!\n",
+            "4 - I LOOOOOOVE BITCONNECT!\n",
+            "5 - I LOOOOOOVE BITCONNECT!\n",
+            "6 - I LOOOOOOVE BITCONNECT!\n",
+            "7 - I LOOOOOOVE BITCONNECT!\n",
+            "8 - I LOOOOOOVE BITCONNECT!\n",
+            "9 - I LOOOOOOVE BITCONNECT!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# functions\n",
+        "# The first part is the function \"definition\", followed by function usage\n",
+        "def print_many_times(how_many_times , say_this):\n",
+        "  for i in range(how_many_times):\n",
+        "    print(say_this)\n"
+      ],
+      "metadata": {
+        "id": "vniQbVDia8nA"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "rgsp44Yfb0xi"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
